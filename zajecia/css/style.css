@@ -1,0 +1,22 @@
+#pierwszy-kontener {
+    background-color: blue;
+    height: 300px;
+}
+
+#drugi-kontener {
+    background-color: red;
+    height: 300px;
+}
+
+.kolumna {
+    height: 300px;
+    background-color: brown;
+}
+
+.kolumna:nth-child(odd) {
+    background-color: aqua;
+}
+
+.item {
+    height: 600px;
+}
