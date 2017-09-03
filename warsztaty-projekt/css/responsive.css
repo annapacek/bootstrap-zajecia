@@ -4,12 +4,23 @@
     background-color: #FFFFFF;
     }
     
-    #main-nav .navbar-toggle,
     #main-nav .navbar-brand,
     #list-nav li a {
     color: #0ed8d6; 
     }
     
+    #main-nav .navbar-toggle .icon-bar {
+        background-color: #0ed8d6;
+    }
+    
+    #main-nav a:hover {
+        color: #777777;   
+    }
+    
+    #main-nav .navbar-toggle {
+        background-color: #FFFFFF;
+    }
+
     #list-nav {
         text-align: right;
     }

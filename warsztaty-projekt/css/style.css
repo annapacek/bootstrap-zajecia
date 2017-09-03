@@ -1,24 +1,39 @@
 body {
-    font-family: 'Droid Serif', serif;
+/*    font-family: 'Droid Serif', serif;*/
+    margin: 0;
+    color: #777777;
+    font-family: 'Roboto Slab', serif;
 }
 
+p:nth-child(2) {
+    font-family: 'Droid Serif', serif;
+}
 /*stylowanie nawigacji*/
 
 #main-nav {
     background-color: transparent;
     border: none;
+    font-family: 'Droid Serif', serif;
+}
+
+.navbar-brand {
+    font-size: 25px;
 }
 
 #list-nav,
-#services h3,
-#services h4 {
+h3,
+h4 {
     font-family: 'Montserrat', sans-serif;
+    color: #333333;
 }
 
 /*nadanie koloru czcionki elementom nagłówka*/
-#main-nav .navbar-brand,
-#list-nav li a {
+#main-nav a {
     color: white; 
+}
+
+#main-nav a:hover {
+    color: #0ed8d6; 
 }
 
 /*stylowanie nagłówka*/
@@ -37,7 +52,7 @@ body {
     height: 100%;
     background-color: #333333;
     opacity: 0.5;
-}
+}/*mozna tez linear header*/
 
 #inner-header {
     position: absolute;
@@ -52,30 +67,217 @@ body {
     padding: 20px;
 }
 
-#inner-header .btn {
+#inner-header h2 {
+    font-family: 'Droid Serif', serif;
+}
+
+.btn {
     font-family: 'Montserrat', sans-serif;
     background-color: #0ed8d6;
     color: #FFFFFF;
-    border: none;
+    border: 2px solid #0ed8d6;
+}
+
+.btn:hover {
+    border: 2px solid #0ed8d6;
+    background-color: #FFFFFF;
+    color: #0ed8d6;
 }
 
 /* stylowanie sekcji services*/
-#services {
-    padding: 80px;  
+#services,
+#portfolio,
+#my-team,
+#contact {
+    padding: 100px 0;
 }
 
-#inner-services .row {
+.row {
     width: 100%;
+    margin: 60px 0;
 }
 
-#inner-services service-image {
+#inner-services .services-image {
     width: 50px;
     height: 50px;
+    background-color: #0ed8d6;
+    display: inline-block;
+    border-radius: 50%;
+    border: 0.5px solid #0ed8d6;
+    transition: all 1s;
 }
 
-#inner-services .services-content fa {
-    font-size: 40px;
+#inner-services .services-image .fa {
+    font-size: 25px;
+    line-height: 50px;
+    color: #FFFFFF;
+    transition: all 1s;
+}
 
-    height: 40px;
+#inner-services .services-image .fa:hover {
+    transform: rotate(360deg);
+    color: #0ed8d6;
+}
+
+#inner-services .services-image:hover {
+    background-color: #FFFFFF;
+    border: 0.5px solid #0ed8d6;
+}
+
+/* stylowanie nawigacji */
+
+#portfolio {
+    background-color: #F7F7F7;
+}
+
+#portfolio figure {
+    padding: 0;
+    background-color: #FFFFFF;
+    border: 10px solid #F7F7F7;
+} 
+
+#portfolio .image-outer {
+    overflow: hidden;
+    height: 250px;
+} 
+
+#portfolio .image {
+    background-size: cover;
+    height: 100%;
+    transition: all 1s;
+}
+
+#portfolio .image:hover {
+    transform: scale(1.2);
+}
+
+#portfolio .mask {
+    background-color: rgba(14, 216, 214, 0.6);
+    height: 100%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#portfolio .fa {
+    font-size: 80px;
+    line-height: 250px;
+    color: #FFFFFF;
+}
+
+#portfolio .mask:hover {
+    opacity: 1;
+}
+
+#portfolio .first {
+    background-image: url(../img/portfolio/box_of_cookies.jpg);
+}
+
+#portfolio .second {
+    background-image: url(../img/portfolio/chaotic_paint.jpg);
+}
+
+#portfolio .third {
+    background-image: url(../img/portfolio/chestnut_on_bracket.jpg);
+}
+
+#portfolio .fourth {
+    background-image: url(../img/portfolio/child_with_blue_paint.jpg);
+}
+
+#portfolio .fifth {
+    background-image: url(../img/portfolio/house_with_blue_doors.jpg);
+}
+
+#portfolio .sixth {
+    background-image: url(../img/portfolio/typing_on_laptop.jpg);
+}
+
+#portfolio .text-content {
+    padding: 20px;
+}
+
+/*stylowanie sekcji zespol*/
+
+#my-team .face {
+    width: 200px;
+    height: 200px; 
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#my-team .man1 {
+    background-image: url(../img/team/man-1.jpg);
+}
+
+#my-team .man2 {
+    background-image: url(../img/team/man-2.jpg);
+}
+
+#my-team .woman1 {
+    background-image: url(../img/team/woman-1.jpg);
+}
+
+#my-team .text-content p {
+    font-family: 'Roboto Slab', serif;
+}
+.social-icon {
     width: 40px;
+    height: 40px; 
+    border-radius: 50%;
+    background-color: #222222;
+    display: inline-block;
+    transition: all 0.5s;
+    margin: 0 5px;
+}
+
+.social-icon .fa {
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 40px;
+}
+
+.social-icon:hover {
+    background-color: #0ed8d6;
+}
+
+.team-description {
+    width: 80%;
+    margin: auto;
+}
+
+/*stylowanie contact*/
+
+#contact {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url(../img/footer/world-map.jpg);
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#contact h3 {
+    color: #FFFFFF;
+}
+
+#contact p {
+    margin-bottom: 50px;
+}
+
+.inner-form input {
+    height: 50px;
+}
+.form-control::placeholder {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+#contact .button {
+    width: 100%;
+}
+#contact .btn {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#footer {
+    padding: 50px 0;
 }
